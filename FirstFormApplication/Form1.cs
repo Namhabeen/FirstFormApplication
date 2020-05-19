@@ -15,6 +15,23 @@ namespace FirstFormApplication
         public Form1()
         {
             InitializeComponent();
+            MyButton.Enabled = true;
+            MyButton.Text = "코드에서 변경!";
+            MyButton.Width = 200;
+
+            for (int i = 0; i < 5; i++)
+            {
+                Button button = new Button();
+                Controls.Add(button);
+                button.Location = new Point(213, 13 + (23 + 3)*i);
+                button.Text = "동적생성 "+i+"번째!";
+            }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
